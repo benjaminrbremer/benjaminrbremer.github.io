@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI R&amp;D in Waste Management — [Your Name]</title>
+  <meta name="description" content="Research paper: The Economics of AI R&D in Waste Management Applications. An economic model of a waste managing firm's R&D investment in AI solutions. Under review at Waste Management.">
+
+  <meta property="og:title"       content="The Economics of AI R&amp;D in Waste Management Applications — [Your Name]">
+  <meta property="og:description" content="An economic model of a waste managing firm that chooses to undergo R&D to increase the efficiency of their waste disposal. Under review at Waste Management.">
+  <meta property="og:image"       content="https://yourportfolio.com/assets/images/og-image.jpg">
+  <meta property="og:url"         content="https://yourportfolio.com/research/paper-one.html">
+  <meta property="og:type"        content="article">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary navigation">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo">BB<span>.</span></a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6"  x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li class="nav-item">
+        <a href="../work/index.html" class="nav-link" aria-haspopup="true">Work</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <h4>Experience</h4>
+            <a href="../work/index.html"     role="menuitem">All Experience →</a>
+            <a href="../work/coorstek.html" role="menuitem">CoorsTek</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="../education/index.html" class="nav-link" aria-haspopup="true">Education</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <a href="../education/index.html"      role="menuitem">Overview</a>
+            <a href="../education/coursework.html" role="menuitem">Relevant Coursework</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="../projects/index.html" class="nav-link" aria-haspopup="true">Projects</a>
+        <div class="nav-dropdown nav-dropdown--two-col" role="menu">
+          <div class="dropdown-group">
+            <h4>Personal</h4>
+            <a href="../projects/resume-app.html" role="menuitem">Resume Tailoring App</a>
+            <a href="../projects/arv-predictor.html" role="menuitem">ARV Predictor</a>
+          </div>
+          <div class="dropdown-group">
+            <h4>Work</h4>
+            <a href="../work/coorstek/material-history.html"      role="menuitem">Material History</a>
+            <a href="../work/coorstek/semantic-segmentation.html" role="menuitem">Semantic Segmentation</a>
+            <a href="../work/coorstek/rag-chatbot.html"           role="menuitem">RAG Chatbot</a>
+            <a href="../work/coorstek/defect-detection.html"      role="menuitem">Defect Detection</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="../research/index.html" class="nav-link active" aria-haspopup="true">Research</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <h4>Papers</h4>
+            <a href="../research/index.html"     role="menuitem">All Research →</a>
+            <a href="../research/paper-one.html" role="menuitem">AI Waste Mgmt</a>
+            <a href="../research/paper-two.html" role="menuitem">IPR Subsidies</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="../writing/index.html" class="nav-link" aria-haspopup="true">Writing</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <h4>Samples</h4>
+            <a href="../writing/index.html"                role="menuitem">All Writing →</a>
+            <a href="../writing/nvidia-ip-governance.html" role="menuitem">NVIDIA IP Governance</a>
+            <a href="../writing/environmental-econ.html"   role="menuitem">Env. Econ. Term Paper</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      <li><a href="../assets/resume.pdf" class="nav-link resume-btn" target="_blank" rel="noopener">Resume ↗</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+  <header class="article-hero" aria-labelledby="paper-title">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="sep">›</span>
+        <a href="../research/index.html">Research</a>
+        <span class="sep">›</span>
+        <span aria-current="page">AI R&amp;D in Waste Management</span>
+      </nav>
+      <div class="article-meta">
+        <span class="card-badge badge-review">Under Review</span>
+        <span class="article-date">Waste Management</span>
+      </div>
+      <h1 id="paper-title">The Economics of AI R&amp;D in Waste Management Applications</h1>
+      <p class="lead">An economic model of a waste managing firm that chooses to undergo R&amp;D to increase the efficiency of their waste disposal.</p>
+    </div>
+  </header>
+
+  <div class="article-body">
+    <div class="container">
+      <div class="article-layout">
+
+        <article class="article-content">
+
+          <h2>Overview</h2>
+          <p>
+            This paper started as a term paper freshman year for my environmental economics (ECON-520).
+            More on that paper can be found under my the <a href="../writing/environmental-econ.html">writing samples portion of my website</a>.
+            After recieving a stellar grade, my professor reached out and asked if I wanted to use my CS
+            background to help him model a firm's investment and payoff in AI technologies, using my term
+            paper as a base. Since then, we have adapted the baseline model from my term paper to include
+            an additional R&amp;D cost toward AI solutions, as well as included the various parts of a
+            firm's profit maximization function where the solutions yield benefits.
+          </p>
+          <p style="font-size:.875rem; color:var(--slate-400); font-style:italic;">
+            Full paper text is withheld pending review. A preprint will be made available upon acceptance.
+          </p>
+
+          <h2>Conferences</h2>
+          <p>
+            Throughout the development and review process of this paper, I have had the opportunity to
+            attend academic conferences, co-presenting my ideas to others while learning more about
+            advanced economic concepts.
+          </p>
+          <ul>
+            <li>Annual Meeting of the Association of Environmental and Resource Economists (AERE) — May 2025, Albuquerque, NM</li>
+            <li>Annual Meeting of the Southern Economics Association (SEA) — November 2025, Tampa, FL</li>
+          </ul>
+
+          <div class="article-nav">
+            <a href="../research/index.html" class="card-link">← All Research</a>
+            <a href="paper-two.html" class="card-link">IPR Subsidies →</a>
+          </div>
+
+        </article>
+
+        <aside class="article-sidebar" aria-label="Paper details">
+          <div class="sidebar-box">
+            <h4>Status</h4>
+            <span class="card-badge badge-review" style="margin-top:4px;">Under Review</span>
+          </div>
+          <div class="sidebar-box">
+            <h4>Venue</h4>
+            <p style="font-size:.875rem; color:var(--slate-600); line-height:1.5;"><em>Waste Management</em></p>
+          </div>
+          <div class="sidebar-box">
+            <h4>Topics</h4>
+            <div class="sidebar-tech">
+              <span class="tech-tag">Environmental Economics</span>
+              <span class="tech-tag">AI R&amp;D</span>
+              <span class="tech-tag">Waste Management</span>
+              <span class="tech-tag">Economic Modeling</span>
+            </div>
+          </div>
+          <div class="sidebar-box">
+            <h4>Links</h4>
+            <div class="sidebar-links">
+              <span style="font-size:.84rem; color:var(--slate-400); font-style:italic;">Preprint available upon acceptance.</span>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <a href="../index.html" class="footer-logo">BB<span>.</span></a>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="../work/index.html">Work</a>
+      <a href="../education/index.html">Education</a>
+      <a href="../projects/index.html">Projects</a>
+      <a href="../research/index.html">Research</a>
+      <a href="../writing/index.html">Writing</a>
+      <a href="../skills/index.html">Skills</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+    <span class="footer-copy">© 2026</span>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

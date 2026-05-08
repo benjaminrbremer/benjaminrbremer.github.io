@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benjamin Bremer — AI/ML Engineer &amp; Data Scientist</title>
+  <meta name="description" content="Portfolio of Benjamin Bremer, a Computer Science and Economics student at RIT specializing in machine learning, data science, and AI engineering.">
+
+  <meta property="og:title"       content="Benjamin Bremer — AI/ML Engineer &amp; Data Scientist">
+  <meta property="og:description" content="Final-year CS &amp; Economics student building intelligent systems. Open to full-time AI/ML and data science roles.">
+  <meta property="og:image"       content="https://yourportfolio.com/assets/images/og-image.jpg">
+  <meta property="og:url"         content="https://yourportfolio.com/">
+  <meta property="og:type"        content="website">
+  <meta name="twitter:card"       content="summary_large_image">
+  <meta name="twitter:title"      content="Benjamin Bremer — AI/ML Engineer &amp; Data Scientist">
+  <meta name="twitter:description"content="Final-year CS &amp; Economics student. Open to full-time AI/ML and data science roles.">
+  <meta name="twitter:image"      content="https://yourportfolio.com/assets/images/og-image.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">BB<span>.</span></a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6"  x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li class="nav-item">
+        <a href="work/index.html" class="nav-link" aria-haspopup="true">Work</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <h4>Experience</h4>
+            <a href="work/index.html"      role="menuitem">All Experience →</a>
+            <a href="work/coorstek.html"   role="menuitem">CoorsTek</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="education/index.html" class="nav-link" aria-haspopup="true">Education</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <a href="education/index.html"      role="menuitem">Overview</a>
+            <a href="education/coursework.html" role="menuitem">Relevant Coursework</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="projects/index.html" class="nav-link" aria-haspopup="true">Projects</a>
+        <div class="nav-dropdown nav-dropdown--two-col" role="menu">
+          <div class="dropdown-group">
+            <h4>Personal</h4>
+            <a href="projects/resume-app.html" role="menuitem">Resume Tailoring App</a>
+            <a href="projects/arv-predictor.html" role="menuitem">ARV Predictor</a>
+          </div>
+          <div class="dropdown-group">
+            <h4>Work</h4>
+            <a href="work/coorstek/material-history.html"      role="menuitem">Material History</a>
+            <a href="work/coorstek/semantic-segmentation.html" role="menuitem">Semantic Segmentation</a>
+            <a href="work/coorstek/rag-chatbot.html"           role="menuitem">RAG Chatbot</a>
+            <a href="work/coorstek/defect-detection.html"      role="menuitem">Defect Detection</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="research/index.html" class="nav-link" aria-haspopup="true">Research</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <h4>Papers</h4>
+            <a href="research/index.html"     role="menuitem">All Research →</a>
+            <a href="research/paper-one.html" role="menuitem">AI Waste Mgmt</a>
+            <a href="research/paper-two.html" role="menuitem">IPR Subsidies</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="writing/index.html" class="nav-link" aria-haspopup="true">Writing</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <h4>Samples</h4>
+            <a href="writing/index.html"            role="menuitem">All Writing →</a>
+            <a href="writing/nvidia-ip-governance.html" role="menuitem">NVIDIA IP Governance</a>
+            <a href="writing/environmental-econ.html" role="menuitem">Env. Econ. Term Paper</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="assets/resume.pdf" class="nav-link resume-btn" target="_blank" rel="noopener">Resume ↗</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ── Hero ────────────────────────────────────────────────── -->
+  <section class="hero" aria-labelledby="hero-name">
+    <div class="container" style="text-align:center;">
+      <div class="hero-eyebrow">
+        <span class="status-dot" aria-hidden="true"></span>
+        Open to full-time opportunities starting January&nbsp;2027
+      </div>
+      <h1 id="hero-name">Benjamin Bremer</h1>
+      <p class="hero-title">AI/ML Engineer &amp; Data Scientist</p>
+
+      <!-- Credential strip -->
+      <div class="hero-credential-strip" aria-label="Key credentials">
+        <a href="work/coorstek.html" class="credential-pill">
+          CoorsTek<span class="pill-sep">·</span>ML Intern<span class="pill-sep">·</span><span class="pill-accent">14 months</span>
+        </a>
+        <a href="education/index.html" class="credential-pill">
+          Rochester Institute of Technology<span class="pill-sep">·</span>B.S. Computer Science<span class="pill-sep">·</span>B.S. Economics<span class="pill-sep">·</span>3.7 GPA<span class="pill-sep">·</span><span class="pill-accent">Dec 2026</span>
+        </a>
+      </div>
+
+      <!-- Core tech strip -->
+      <div class="hero-skill-strip" aria-label="Core technologies">
+        <span class="skill-pill">Python</span>
+        <span class="skill-pill">RAG / LLM Systems</span>
+        <span class="skill-pill">Databricks</span>
+        <span class="skill-pill">Computer Vision</span>
+        <span class="skill-pill">Deep Learning / PyTorch</span>
+        <span class="skill-pill">Machine Learning</span>
+        <span class="skill-pill">MLOps / LLMOps</span>
+        <a href="skills/index.html" class="skill-pill">All Skills →</a>
+      </div>
+
+      <div class="hero-ctas">
+        <a href="assets/resume.pdf" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Open resume PDF">
+          Resume ↗
+        </a>
+        <a href="https://github.com/benjaminrbremer" class="btn btn-outline" target="_blank" rel="noopener" aria-label="GitHub profile">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+          </svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/bremer-benjamin" class="btn btn-outline" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+        <a href="contact.html" class="btn btn-outline">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ─────────────────────────────────────────────── -->
+  <section style="background: var(--bg); padding: 28px 0;" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Background</p>
+        <h2 id="about-heading">About</h2>
+      </div>
+      <div style="max-width: 680px;">
+        <p style="font-size:1.05rem; line-height:1.75; color:var(--slate-600); margin-bottom:16px;">
+          I'm a final-year CS and Economics double-major with hands-on experience deploying ML systems, with an intense focus on delivering business value. I care as much about why a model works as whether it does — and I'm drawn to problems where messy real-world data needs to be shaped into something that actually generalizes.
+        </p>
+        <p style="font-size:1.05rem; line-height:1.75; color:var(--slate-600);">
+          Beyond the technical, my economics background helps me understand customer needs and communicate technical concepts clearly to non-technical users. 
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Featured Projects ──────────────────────────────────── -->
+  <section class="featured-projects" id="projects" aria-labelledby="projects-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Selected Work</p>
+        <h2 id="projects-heading">Featured Projects</h2>
+        <p>Highlights across internship, school, and personal work — each with a full write-up.</p>
+      </div>
+      <div class="card-grid">
+
+        <article class="card" data-tags="Python,Databricks,RAG,LLM,MLOps">
+          <span class="card-badge badge-work">Work</span>
+          <h3>RAG R&amp;D Chatbot</h3>
+          <p class="card-desc">Agentic RAG chatbot deployed on Databricks for CoorsTek's R&amp;D group — connecting engineers to their data via orchestrated AI agents. Built from scratch to first production deployment in 2 months.</p>
+          <div class="tech-tags"></div>
+          <div class="card-stats">
+            <div class="stat-item"><span class="stat-num">10×</span><span class="stat-label">faster data retrieval</span></div>
+            <div class="stat-item"><span class="stat-num">2 mo</span><span class="stat-label">scratch to production</span></div>
+          </div>
+          <a href="work/coorstek/rag-chatbot.html" class="card-link">Read More →</a>
+        </article>
+
+        <article class="card" data-tags="Python,PyTorch,Computer Vision,MLOps">
+          <span class="card-badge badge-work">Work</span>
+          <h3>Discoloration Defect Detection</h3>
+          <p class="card-desc">Production CV system for automated quality control at CoorsTek — improved defect detection accuracy from ~80% to 99% by fixing data quality issues and overhauling the model development procedure.</p>
+          <div class="tech-tags"></div>
+          <div class="card-stats">
+            <div class="stat-item"><span class="stat-num">~99%</span><span class="stat-label">accuracy</span></div>
+            <div class="stat-item"><span class="stat-num">~80%→~99%</span><span class="stat-label">improvement</span></div>
+          </div>
+          <a href="work/coorstek/defect-detection.html" class="card-link">Read More →</a>
+        </article>
+
+      </div>
+      <div class="section-footer">
+        <a href="projects/index.html" class="btn btn-outline-dark">View All Projects →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Work Experience ────────────────────────────────────── -->
+  <section style="background: var(--bg); padding: 28px 0;" aria-labelledby="work-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Experience</p>
+        <h2 id="work-heading">Work</h2>
+      </div>
+
+      <div class="experience-strip">
+        <div class="experience-strip-info">
+          <div class="exp-role">CoorsTek, Inc. — Machine Learning Intern</div>
+          <p>Three consecutive internships over 14 months at one of the world's largest advanced ceramics manufacturers. Built and deployed four production ML systems: semantic segmentation tools for ceramic part analysis, a graph-based material history system, an agentic RAG chatbot (10× faster data retrieval for R&D engineers), and a production defect detection pipeline (improved accuracy from ~80% to 99%).</p>
+          <div class="tech-tags" style="margin-top:12px;">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">PyTorch</span>
+            <span class="tech-tag">Databricks</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">Computer Vision</span>
+            <span class="tech-tag">RAG</span>
+          </div>
+        </div>
+        <div class="experience-strip-meta">
+          <div class="exp-dates">Jun 2024 – Mar 2026</div>
+          <a href="work/coorstek.html" class="card-link" style="font-size:.84rem;">View Full Experience →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Education ─────────────────────────────────────────── -->
+  <section style="padding: 28px 0;" aria-labelledby="edu-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Background</p>
+        <h2 id="edu-heading">Education</h2>
+      </div>
+
+      <div class="education-strip">
+        <div class="education-strip-info">
+          <div class="exp-role">B.S. Computer Science | B.S. Economics</div>
+          <p class="university" style="color:var(--slate-500); font-size:.9rem; margin:4px 0 10px;">Rochester Institute of Technology — Rochester, NY</p>
+          <p>Double major at RIT combining a rigorous CS foundation — ML, deep learning, NLP, algorithms, systems — with quantitative economics in econometrics, game theory, and financial theory. The combination enables me to build models that are technically sound and economically interpretable, a pairing that has proven uniquely valuable across every project I've worked on.</p>
+        </div>
+        <div class="education-strip-meta">
+          <div class="edu-grad-year">Dec 2026</div>
+          <div style="font-size:.78rem; color:var(--slate-400); margin-top:2px;">GPA: 3.7</div>
+          <a href="education/index.html" class="card-link" style="font-size:.84rem; margin-top:12px; display:inline-block;">View Full Education →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Research ──────────────────────────────────────────── -->
+  <section style="background: var(--bg); padding: 28px 0;" aria-labelledby="research-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Academic</p>
+        <h2 id="research-heading">Research</h2>
+        <p>Two papers in progress — one currently under peer review.</p>
+      </div>
+
+      <div class="research-grid" style="padding: 0;">
+
+        <article class="research-card">
+          <div>
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px; flex-wrap:wrap;">
+              <span class="card-badge badge-review" style="margin:0;">Under Review</span>
+              <span class="research-venue">Waste Management</span>
+            </div>
+            <h3>The Economics of AI R&amp;D in Waste Management Applications</h3>
+            <p class="abstract" style="margin:10px 0;">An economic model of a waste-managing firm that chooses to undergo R&amp;D to increase the efficiency of their waste disposal — examining how AI adoption reshapes the firm's investment and profit maximization problem.</p>
+            <div class="research-authors" style="margin-top:8px;">
+              <span style="font-size:.78rem; color:var(--slate-400);">Benjamin Bremer et al. · Submitted 2025</span>
+            </div>
+          </div>
+          <div style="flex-shrink:0; margin-top:4px;">
+            <a href="research/paper-one.html" class="card-link">Read Overview →</a>
+          </div>
+        </article>
+
+        <article class="research-card">
+          <div>
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px; flex-wrap:wrap;">
+              <span class="card-badge badge-wip" style="margin:0;">In Preparation</span>
+            </div>
+            <h3>An Analysis of an Intellectual Property Rights Based Subsidy</h3>
+            <p class="abstract" style="margin:10px 0;">Identifies a relatively novel IPR-based subsidy that aims to bring privately optimal levels of R&amp;D into balance with social optimum, comparing it against traditional input- and output-based subsidy approaches.</p>
+            <div class="research-authors" style="margin-top:8px;">
+              <span style="font-size:.78rem; color:var(--slate-400);">Benjamin Bremer et al. · In preparation</span>
+            </div>
+          </div>
+          <div style="flex-shrink:0; margin-top:4px;">
+            <a href="research/paper-two.html" class="card-link">Read Overview →</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="section-footer">
+        <a href="research/index.html" class="btn btn-outline-dark">View All Research →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Featured Writing ──────────────────────────────────── -->
+  <section style="padding: 28px 0;" aria-labelledby="writing-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Writing</p>
+        <h2 id="writing-heading">Featured Writing</h2>
+        <p>Research papers and essays on AI, machine learning policy, and economics.</p>
+      </div>
+
+      <div class="writing-grid" style="padding: 0;">
+
+        <a class="writing-card" href="writing/nvidia-ip-governance.html">
+          <div>
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+              <span class="card-badge badge-essay" style="margin:0;">Term Paper</span>
+            </div>
+            <h3>An Analysis of NVIDIA's IP Governance</h3>
+            <p class="abstract">Analyzes two promising and one concerning aspect of NVIDIA's IP governance strategy as disclosed in their Form 10-K — examining how their tight hardware-software integration creates durable competitive moats, and where that strategy introduces risk.</p>
+            <div class="writing-card-meta">
+              <span style="font-size:.78rem; color:var(--slate-400);">~5 pages · Law and Economics of Intellectual Property Rights</span>
+            </div>
+          </div>
+          <div class="writing-card-action">
+            <span class="btn btn-outline-dark" style="font-size:.84rem; padding:8px 16px; white-space:nowrap;">Read →</span>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="section-footer">
+        <a href="writing/index.html" class="btn btn-outline-dark">View All Writing →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ───────────────────────────────────────────── -->
+  <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section-header" style="color:inherit;">
+        <p class="section-label" style="color:rgba(255,255,255,.55);">Get in Touch</p>
+        <h2 id="contact-heading" style="color:#fff;">Let's Connect</h2>
+        <p style="color:rgba(255,255,255,.7);">Open to full-time roles in AI/ML engineering and data science starting January&nbsp;2027.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-card">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <polyline points="2,4 12,13 22,4"/>
+          </svg>
+          <div>
+            <div class="contact-card-label">Email</div>
+            <div class="contact-card-value">benjaminrbremer@gmail.com</div>
+          </div>
+          <button class="copy-btn" data-copy="benjaminrbremer@gmail.com" aria-label="Copy email address">Copy</button>
+        </div>
+
+        <div class="contact-card">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.06 1.18 2 2 0 012.03 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          <div>
+            <div class="contact-card-label">Phone</div>
+            <div class="contact-card-value">+1 (303) 941-9047</div>
+          </div>
+          <button class="copy-btn" data-copy="+13039419047" aria-label="Copy phone number">Copy</button>
+        </div>
+
+        <a href="https://www.linkedin.com/in/bremer-benjamin" class="contact-card" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          <div>
+            <div class="contact-card-label">LinkedIn</div>
+            <div class="contact-card-value">linkedin.com/in/bremer-benjamin</div>
+          </div>
+          <span class="contact-card-arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a href="https://github.com/benjaminrbremer" class="contact-card" target="_blank" rel="noopener" aria-label="GitHub profile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+          </svg>
+          <div>
+            <div class="contact-card-label">GitHub</div>
+            <div class="contact-card-value">github.com/benjaminrbremer</div>
+          </div>
+          <span class="contact-card-arrow" aria-hidden="true">↗</span>
+        </a>
+
+      </div>
+
+      <div style="text-align:center; margin-top:32px;">
+        <a href="contact.html" class="btn btn-outline" style="border-color:rgba(255,255,255,.35); color:#fff;">Full Contact Page →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <a href="index.html" class="footer-logo">BB<span>.</span></a>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="work/index.html">Work</a>
+      <a href="education/index.html">Education</a>
+      <a href="projects/index.html">Projects</a>
+      <a href="research/index.html">Research</a>
+      <a href="writing/index.html">Writing</a>
+      <a href="skills/index.html">Skills</a>
+      <a href="contact.html">Contact</a>
+      <a href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+    <span class="footer-copy">© 2026</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills — Benjamin Bremer</title>
+  <meta name="description" content="Technical skills of Benjamin Bremer — languages, ML frameworks, and tools, with context on how each was learned and where it was applied.">
+
+  <meta property="og:title"       content="Skills — Benjamin Bremer">
+  <meta property="og:description" content="Languages, frameworks, and tools — with project context and how each skill was developed.">
+  <meta property="og:image"       content="https://yourportfolio.com/assets/images/og-image.jpg">
+  <meta property="og:url"         content="https://yourportfolio.com/skills/index.html">
+  <meta property="og:type"        content="website">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary navigation">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo">BB<span>.</span></a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6"  x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li class="nav-item">
+        <a href="../work/index.html" class="nav-link" aria-haspopup="true">Work</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <h4>Experience</h4>
+            <a href="../work/index.html"     role="menuitem">All Experience →</a>
+            <a href="../work/coorstek.html" role="menuitem">CoorsTek</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="../education/index.html" class="nav-link" aria-haspopup="true">Education</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <a href="../education/index.html"      role="menuitem">Overview</a>
+            <a href="../education/coursework.html" role="menuitem">Relevant Coursework</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="../projects/index.html" class="nav-link" aria-haspopup="true">Projects</a>
+        <div class="nav-dropdown nav-dropdown--two-col" role="menu">
+          <div class="dropdown-group">
+            <h4>Personal</h4>
+            <a href="../projects/resume-app.html" role="menuitem">Resume Tailoring App</a>
+            <a href="../projects/arv-predictor.html" role="menuitem">ARV Predictor</a>
+          </div>
+          <div class="dropdown-group">
+            <h4>Work</h4>
+            <a href="../work/coorstek/material-history.html"      role="menuitem">Material History</a>
+            <a href="../work/coorstek/semantic-segmentation.html" role="menuitem">Semantic Segmentation</a>
+            <a href="../work/coorstek/rag-chatbot.html"           role="menuitem">RAG Chatbot</a>
+            <a href="../work/coorstek/defect-detection.html"      role="menuitem">Defect Detection</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="../research/index.html" class="nav-link" aria-haspopup="true">Research</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <h4>Papers</h4>
+            <a href="../research/index.html"     role="menuitem">All Research →</a>
+            <a href="../research/paper-one.html" role="menuitem">AI Waste Mgmt</a>
+            <a href="../research/paper-two.html" role="menuitem">IPR Subsidies</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="../writing/index.html" class="nav-link" aria-haspopup="true">Writing</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <h4>Samples</h4>
+            <a href="../writing/index.html"            role="menuitem">All Writing →</a>
+            <a href="../writing/nvidia-ip-governance.html" role="menuitem">NVIDIA IP Governance</a>
+            <a href="../writing/environmental-econ.html" role="menuitem">Env. Econ. Term Paper</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      <li><a href="../assets/resume.pdf" class="nav-link resume-btn" target="_blank" rel="noopener">Resume ↗</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+  <section class="page-hero" aria-labelledby="skills-heading">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="sep">›</span>
+        <span>Skills</span>
+      </nav>
+      <h1 id="skills-heading">Skills</h1>
+      <p>Languages, frameworks, and tools — with context on how each was developed and where it shows up in real work.</p>
+    </div>
+  </section>
+
+  <section style="background: var(--bg); padding: 52px 0 80px;">
+    <div class="container">
+
+      <!-- ── Languages ──────────────────────────────────────── -->
+      <div class="skills-category">
+        <p class="skills-category-label">Languages</p>
+
+        <div class="skill-entry">
+          <div>
+            <div class="skill-entry-name">Python</div>
+            <div class="skill-entry-level">Advanced</div>
+          </div>
+          <div class="skill-entry-body">
+            <p class="skill-entry-context">Primary language across all CoorsTek work — ML pipelines, data engineering, deep learning training, and app development.</p>
+            <div class="skill-projects">
+              <span class="skill-projects-label">Used in:</span>
+              <a href="../work/coorstek/material-history.html"      class="skill-project-link">Material History ↗</a>
+              <a href="../work/coorstek/rag-chatbot.html"           class="skill-project-link">RAG Chatbot ↗</a>
+              <a href="../work/coorstek/semantic-segmentation.html" class="skill-project-link">Semantic Segmentation ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-entry">
+          <div>
+            <div class="skill-entry-name">SQL</div>
+            <div class="skill-entry-level">Intermediate</div>
+          </div>
+          <div class="skill-entry-body">
+            <p class="skill-entry-context">Queried R&D databases at CoorsTek to calculate material formulations and retrieve structured data.</p>
+            <div class="skill-projects">
+              <span class="skill-projects-label">Used in:</span>
+              <a href="../work/coorstek/material-history.html" class="skill-project-link">Material History ↗</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── ML & Data Science ──────────────────────────────── -->
+      <div class="skills-category">
+        <p class="skills-category-label">ML &amp; Data Science</p>
+
+        <div class="skill-entry">
+          <div>
+            <div class="skill-entry-name">Deep Learning / PyTorch</div>
+            <div class="skill-entry-level">Intermediate</div>
+          </div>
+          <div class="skill-entry-body">
+            <p class="skill-entry-context">Trained semantic segmentation models on XCT and optical images of ceramic parts for geometric analysis. Performed image augmentation to build viable datasets from minimal real data.</p>
+            <div class="skill-projects">
+              <span class="skill-projects-label">Used in:</span>
+              <a href="../work/coorstek/semantic-segmentation.html" class="skill-project-link">Semantic Segmentation ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-entry">
+          <div>
+            <div class="skill-entry-name">Machine Learning</div>
+            <div class="skill-entry-level">Intermediate</div>
+          </div>
+          <div class="skill-entry-body">
+            <p class="skill-entry-context">Developed and improved ML models for manufacturing quality control at CoorsTek, improving model specificity and F1 from ~80% to ~98%.</p>
+            <div class="skill-projects">
+              <span class="skill-projects-label">Used in:</span>
+              <a href="../work/coorstek/defect-detection.html" class="skill-project-link">Defect Detection ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-entry">
+          <div>
+            <div class="skill-entry-name">Computer Vision</div>
+            <div class="skill-entry-level">Intermediate</div>
+          </div>
+          <div class="skill-entry-body">
+            <p class="skill-entry-context">Built production CV pipelines for ceramic part analysis — semantic segmentation for internal feature inspection and classification-based defect detection for manufacturing quality control.</p>
+            <div class="skill-projects">
+              <span class="skill-projects-label">Used in:</span>
+              <a href="../work/coorstek/defect-detection.html"      class="skill-project-link">Defect Detection ↗</a>
+              <a href="../work/coorstek/semantic-segmentation.html" class="skill-project-link">Semantic Segmentation ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-entry">
+          <div>
+            <div class="skill-entry-name">RAG / LLM Systems</div>
+            <div class="skill-entry-level">Intermediate</div>
+          </div>
+          <div class="skill-entry-body">
+            <p class="skill-entry-context">Designed and deployed CoorsTek's first internal agentic RAG system from scratch — Databricks vector search, orchestrated AI agents, and custom prompting to reliably answer R&D engineer queries. Established LLMOps evaluation SOPs for the company.</p>
+            <div class="skill-projects">
+              <span class="skill-projects-label">Used in:</span>
+              <a href="../work/coorstek/rag-chatbot.html" class="skill-project-link">RAG Chatbot ↗</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Data Engineering & Infrastructure ─────────────── -->
+      <div class="skills-category">
+        <p class="skills-category-label">Data Engineering &amp; Infrastructure</p>
+
+        <div class="skill-entry">
+          <div>
+            <div class="skill-entry-name">Databricks</div>
+            <div class="skill-entry-level">Intermediate</div>
+          </div>
+          <div class="skill-entry-body">
+            <p class="skill-entry-context">Platform for LLM/RAG development and deployment at CoorsTek. Built vector search data pipelines, orchestrated AI agents, and pioneered the company's first Databricks-based LLMOps practices.</p>
+            <div class="skill-projects">
+              <span class="skill-projects-label">Used in:</span>
+              <a href="../work/coorstek/rag-chatbot.html" class="skill-project-link">RAG Chatbot ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-entry">
+          <div>
+            <div class="skill-entry-name">ETL</div>
+            <div class="skill-entry-level">Intermediate</div>
+          </div>
+          <div class="skill-entry-body">
+            <p class="skill-entry-context">Built data ingestion pipelines for structured R&D databases and hundreds of technical documents to power the agentic RAG system.</p>
+            <div class="skill-projects">
+              <span class="skill-projects-label">Used in:</span>
+              <a href="../work/coorstek/rag-chatbot.html" class="skill-project-link">RAG Chatbot ↗</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Software Engineering ───────────────────────────── -->
+      <div class="skills-category">
+        <p class="skills-category-label">Software Engineering</p>
+
+        <div class="skill-entry">
+          <div>
+            <div class="skill-entry-name">Object-Oriented Programming</div>
+            <div class="skill-entry-level">Advanced</div>
+          </div>
+          <div class="skill-entry-body">
+            <p class="skill-entry-context">Designed a generic OOP implementation of a directed acyclic graph to represent and traverse complex material histories, with methods to calculate formulations and transform units.</p>
+            <div class="skill-projects">
+              <span class="skill-projects-label">Used in:</span>
+              <a href="../work/coorstek/material-history.html" class="skill-project-link">Material History ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-entry">
+          <div>
+            <div class="skill-entry-name">Graph Theory</div>
+            <div class="skill-entry-level">Intermediate</div>
+          </div>
+          <div class="skill-entry-body">
+            <p class="skill-entry-context">Developed a directed acyclic graph (DAG) data structure to model material histories and compute formulation values at CoorsTek.</p>
+            <div class="skill-projects">
+              <span class="skill-projects-label">Used in:</span>
+              <a href="../work/coorstek/material-history.html" class="skill-project-link">Material History ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-entry">
+          <div>
+            <div class="skill-entry-name">App Development</div>
+            <div class="skill-entry-level">Intermediate</div>
+          </div>
+          <div class="skill-entry-body">
+            <p class="skill-entry-context">Built Streamlit web apps for R&D researchers at CoorsTek — enabling material history queries and pixel-level geometric measurements of ceramic parts.</p>
+            <div class="skill-projects">
+              <span class="skill-projects-label">Used in:</span>
+              <a href="../work/coorstek/material-history.html"      class="skill-project-link">Material History ↗</a>
+              <a href="../work/coorstek/semantic-segmentation.html" class="skill-project-link">Semantic Segmentation ↗</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Project & Process ──────────────────────────────── -->
+      <div class="skills-category">
+        <p class="skills-category-label">Project &amp; Process</p>
+
+        <div class="skill-entry">
+          <div>
+            <div class="skill-entry-name">Agile Development</div>
+            <div class="skill-entry-level">Intermediate</div>
+          </div>
+          <div class="skill-entry-body">
+            <p class="skill-entry-context">Scrum master for 2 sprints on a cross-functional team of 5; helped instill Agile development practices across the CoorsTek ML team.</p>
+            <div class="skill-projects">
+              <span class="skill-projects-label">Used in:</span>
+              <a href="../work/coorstek/defect-detection.html" class="skill-project-link">Defect Detection ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-entry">
+          <div>
+            <div class="skill-entry-name">MLOps / LLMOps</div>
+            <div class="skill-entry-level">Intermediate</div>
+          </div>
+          <div class="skill-entry-body">
+            <p class="skill-entry-context">Established standard procedures for DataOps, MLOps, and LLMOps across CoorsTek's production-deployed AI products — including agent evaluation and deployment workflows.</p>
+            <div class="skill-projects">
+              <span class="skill-projects-label">Used in:</span>
+              <a href="../work/coorstek/rag-chatbot.html"       class="skill-project-link">RAG Chatbot ↗</a>
+              <a href="../work/coorstek/defect-detection.html"  class="skill-project-link">Defect Detection ↗</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Research & Writing ─────────────────────────────── -->
+      <div class="skills-category">
+        <p class="skills-category-label">Research &amp; Writing</p>
+
+        <div class="skill-entry">
+          <div>
+            <div class="skill-entry-name">Academic Writing</div>
+            <div class="skill-entry-level">Intermediate</div>
+          </div>
+          <div class="skill-entry-body">
+            <p class="skill-entry-context">Published writing on IP governance and environmental economics — fitting structured arguments, analysis, and academic citations within tight page limits.</p>
+            <div class="skill-projects">
+              <span class="skill-projects-label">Used in:</span>
+              <a href="../writing/nvidia-ip-governance.html"  class="skill-project-link">NVIDIA IP Governance ↗</a>
+              <a href="../writing/environmental-econ.html"    class="skill-project-link">Environmental Econ ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-entry">
+          <div>
+            <div class="skill-entry-name">Economic Modeling</div>
+            <div class="skill-entry-level">Intermediate</div>
+          </div>
+          <div class="skill-entry-body">
+            <p class="skill-entry-context">Built and analyzed economic models of waste management policy, synthesizing literature into a novel contribution in Environmental Economics — a model that grew into a peer-reviewed research paper.</p>
+            <div class="skill-projects">
+              <span class="skill-projects-label">Used in:</span>
+              <a href="../writing/environmental-econ.html" class="skill-project-link">Environmental Econ ↗</a>
+              <a href="../research/paper-one.html"         class="skill-project-link">AI Waste Mgmt Research ↗</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <a href="../index.html" class="footer-logo">BB<span>.</span></a>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="../work/index.html">Work</a>
+      <a href="../education/index.html">Education</a>
+      <a href="../projects/index.html">Projects</a>
+      <a href="../research/index.html">Research</a>
+      <a href="../writing/index.html">Writing</a>
+      <a href="index.html">Skills</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+    <span class="footer-copy">© 2026</span>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

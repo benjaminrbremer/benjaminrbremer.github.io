@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — [Your Name]</title>
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">BB<span>.</span></a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6"  x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item">
+        <a href="work/index.html" class="nav-link" aria-haspopup="true">Work</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <h4>Experience</h4>
+            <a href="work/index.html"     role="menuitem">All Experience →</a>
+            <a href="work/coorstek.html" role="menuitem">CoorsTek</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="education/index.html" class="nav-link" aria-haspopup="true">Education</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <a href="education/index.html"      role="menuitem">Overview</a>
+            <a href="education/coursework.html" role="menuitem">Relevant Coursework</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="projects/index.html" class="nav-link" aria-haspopup="true">Projects</a>
+        <div class="nav-dropdown nav-dropdown--two-col" role="menu">
+          <div class="dropdown-group">
+            <h4>Personal</h4>
+            <a href="projects/resume-app.html" role="menuitem">Resume Tailoring App</a>
+            <a href="projects/arv-predictor.html" role="menuitem">ARV Predictor</a>
+          </div>
+          <div class="dropdown-group">
+            <h4>Work</h4>
+            <a href="work/coorstek/material-history.html"      role="menuitem">Material History</a>
+            <a href="work/coorstek/semantic-segmentation.html" role="menuitem">Semantic Segmentation</a>
+            <a href="work/coorstek/rag-chatbot.html"           role="menuitem">RAG Chatbot</a>
+            <a href="work/coorstek/defect-detection.html"      role="menuitem">Defect Detection</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="research/index.html" class="nav-link" aria-haspopup="true">Research</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <h4>Papers</h4>
+            <a href="research/index.html"     role="menuitem">All Research →</a>
+            <a href="research/paper-one.html" role="menuitem">AI Waste Mgmt</a>
+            <a href="research/paper-two.html" role="menuitem">IPR Subsidies</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="writing/index.html" class="nav-link" aria-haspopup="true">Writing</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <h4>Samples</h4>
+            <a href="writing/index.html"            role="menuitem">All Writing →</a>
+            <a href="writing/nvidia-ip-governance.html" role="menuitem">NVIDIA IP Governance</a>
+            <a href="writing/environmental-econ.html" role="menuitem">Env. Econ. Term Paper</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="assets/resume.pdf" class="nav-link resume-btn" target="_blank" rel="noopener">Resume ↗</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="not-found">
+    <div class="not-found-inner">
+      <div class="not-found-num" aria-hidden="true">404</div>
+      <h2>Page not found</h2>
+      <p>The page you're looking for doesn't exist or may have been moved.</p>
+      <a href="index.html" class="btn btn-primary">← Go Home</a>
+    </div>
+  </div>
+</main>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education — [Name]</title>
+  <meta name="description" content="Dual B.S. in Computer Science and Economics from Rochester Institute of Technology. Academic background, top coursework, and the story behind the double major.">
+
+  <meta property="og:title"       content="Education — [Name]">
+  <meta property="og:description" content="Dual B.S. in Computer Science and Economics from RIT. Relevant coursework in machine learning, data management, econometrics, and more.">
+  <meta property="og:image"       content="https://yourportfolio.com/assets/images/og-image.jpg">
+  <meta property="og:url"         content="https://yourportfolio.com/education/index.html">
+  <meta property="og:type"        content="website">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <!-- Google Analytics — replace G-XXXXXXXXXX with real Measurement ID and uncomment
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary navigation">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo">BB<span>.</span></a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6"  x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li class="nav-item">
+        <a href="../work/index.html" class="nav-link" aria-haspopup="true">Work</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <h4>Experience</h4>
+            <a href="../work/index.html"     role="menuitem">All Experience →</a>
+            <a href="../work/coorstek.html" role="menuitem">CoorsTek</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="../education/index.html" class="nav-link active" aria-haspopup="true">Education</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <a href="../education/index.html"      role="menuitem">Overview</a>
+            <a href="../education/coursework.html" role="menuitem">Relevant Coursework</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="../projects/index.html" class="nav-link" aria-haspopup="true">Projects</a>
+        <div class="nav-dropdown nav-dropdown--two-col" role="menu">
+          <div class="dropdown-group">
+            <h4>Personal</h4>
+            <a href="../projects/resume-app.html" role="menuitem">Resume Tailoring App</a>
+            <a href="../projects/arv-predictor.html" role="menuitem">ARV Predictor</a>
+          </div>
+          <div class="dropdown-group">
+            <h4>Work</h4>
+            <a href="../work/coorstek/material-history.html"      role="menuitem">Material History</a>
+            <a href="../work/coorstek/semantic-segmentation.html" role="menuitem">Semantic Segmentation</a>
+            <a href="../work/coorstek/rag-chatbot.html"           role="menuitem">RAG Chatbot</a>
+            <a href="../work/coorstek/defect-detection.html"      role="menuitem">Defect Detection</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="../research/index.html" class="nav-link" aria-haspopup="true">Research</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <h4>Papers</h4>
+            <a href="../research/index.html"     role="menuitem">All Research →</a>
+            <a href="../research/paper-one.html" role="menuitem">AI Waste Mgmt</a>
+            <a href="../research/paper-two.html" role="menuitem">IPR Subsidies</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="../writing/index.html" class="nav-link" aria-haspopup="true">Writing</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <h4>Samples</h4>
+            <a href="../writing/index.html"            role="menuitem">All Writing →</a>
+            <a href="../writing/nvidia-ip-governance.html" role="menuitem">NVIDIA IP Governance</a>
+            <a href="../writing/environmental-econ.html" role="menuitem">Env. Econ. Term Paper</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      <li><a href="../assets/resume.pdf" class="nav-link resume-btn" target="_blank" rel="noopener">Resume ↗</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+  <section class="page-hero" aria-labelledby="edu-heading">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="sep">›</span>
+        <span>Education</span>
+      </nav>
+      <h1 id="edu-heading">Education</h1>
+      <p>B.S. Computer Science | B.S. Economics — Rochester Institute of Technology.</p>
+    </div>
+  </section>
+
+  <section style="padding: 52px 0 80px; background: var(--bg);">
+    <div class="container">
+
+      <!-- Degree block -->
+      <div class="edu-degree" aria-label="Degree information">
+        <div>
+          <h2>B.S. Computer Science | B.S. Economics</h2>
+          <p class="university">Rochester Institute of Technology — Rochester, NY</p>
+          <p class="graduation">Expected Graduation: December 2026</p>
+          <p style="font-size: .85rem; color: rgba(255,255,255,.5); margin-top: 6px;">Including a semester abroad at Universität Osnabrück, Germany</p>
+        </div>
+        <div class="gpa-badge" aria-label="GPA">
+          <div class="gpa-num">3.7</div>
+          <div class="gpa-label">GPA</div>
+        </div>
+      </div>
+
+      <!-- Executive summary -->
+      <p style="font-size: 1rem; line-height: 1.75; color: var(--slate-700); margin-bottom: 48px; max-width: 780px;">
+        I have (nearly) completed a rigorous academic program at RIT, receiving a BS in Computer Science, as well as a BS in Economics. This combination gives me an incredibly unique ability to think both abstractly and concretely about complex problems, and developing solutions that have real-world impact. The knowledge I have gained through my <a href="coursework.html" style="color: var(--accent); text-decoration: none; font-weight: 500;">coursework</a> is evidenced and bolstered by over a year of internship experience deploying real AI applications to solve technical problems.
+      </p>
+
+      <!-- Top Relevant Courses -->
+      <p class="edu-col-header">Top Relevant Courses</p>
+      <div class="top-courses-grid">
+
+        <div class="course-card" data-tags="NLP">
+          <h4>Computational Linguistics <span style="font-weight: 400; color: var(--slate-500); font-size: .8rem;">— Universität Osnabrück</span></h4>
+          <p>Learn the fundamentals of how text is processed for use in LLMs</p>
+          <div class="tech-tags"></div>
+        </div>
+
+        <div class="course-card" data-tags="Supervised Learning,Unsupervised Learning">
+          <h4>Machine Learning <span style="font-weight: 400; color: var(--slate-500); font-size: .8rem;">— Universität Osnabrück</span></h4>
+          <p></p>
+          <div class="tech-tags"></div>
+        </div>
+
+        <div class="course-card" data-tags="SQL,Relational Databases,Database Design">
+          <h4>Principles of Data Management</h4>
+          <p>Develop an understanding of relational databases, their advantages over legacy storage methods, and exercise knowledge by implementing a relational database backend for a basic music streaming application.</p>
+          <div class="tech-tags"></div>
+        </div>
+
+        <div class="course-card" data-tags="Searching Algorithms,Neural Networks,Supervised Learning">
+          <h4>Introduction to Artificial Intelligence</h4>
+          <p>Learn the basics of various fundamental concepts in AI</p>
+          <div class="tech-tags"></div>
+        </div>
+
+        <div class="course-card" data-tags="Academic Writing,Research">
+          <h4>Law and Economics of Intellectual Property Rights</h4>
+          <p>Learn the economics behind patent, copyright, trade secret, and open-source frameworks, and analyze public US companies' success as a result of IP governance strategies</p>
+          <div class="tech-tags"></div>
+        </div>
+
+        <div class="course-card" data-tags="Project Value Estimation">
+          <h4>Managerial Economics</h4>
+          <p>Explore the economics involved in real-world business decision-making</p>
+          <div class="tech-tags"></div>
+        </div>
+
+      </div>
+
+      <!-- Why Double Major? -->
+      <p class="edu-col-header">Why Double Major?</p>
+      <div style="max-width: 780px; display: flex; flex-direction: column; gap: 20px;">
+
+        <p style="font-size: 1rem; line-height: 1.75; color: var(--slate-700);">One of the most common questions I get from friends, coworkers, and recruiters is, "Why a double major in economics?" For me, there are a few fundamental reasons: wanting to maximize my academic experience, wanting a deeper general education experience, and better preparing for my future goals.</p>
+
+        <p style="font-size: 1rem; line-height: 1.75; color: var(--slate-700);">At RIT, the only requirement beyond your major is a general education immersion, which is typically 3-4 classes. When I started as a freshman, I knew I at least wanted a minor. When I learned that computer science majors can double major with most other majors without delaying graduation, that became my goal.</p>
+
+        <p style="font-size: 1rem; line-height: 1.75; color: var(--slate-700);">I've never been the type of person to do anything halfway. In my mind, I'm at college for 4 years, whether I get one major or two. So, might as well get two, right?</p>
+
+        <p style="font-size: 1rem; line-height: 1.75; color: var(--slate-700);">That begs the question, "What should I double major in?" Personally, I wanted it to be a general education subject. I considered other technical majors such as chemical and computer engineering, but I knew that a solid computer science foundation, compared with a general education major, I could quickly learn enough about any field my work in computer science brings me to. That theory has been consistently proven true through my internship experience within the R&amp;D group of a technical ceramics company.</p>
+
+        <p style="font-size: 1rem; line-height: 1.75; color: var(--slate-700);">Furthermore, I have known for a long time that a goal of mine is to move into management in the future. This made finance, business management, and economics fantastic candidates. Then, for a project for my freshman seminar class, I had to interview a professor, and I chose to interview my economics professor. He sold me on economics as a way to prepare for the business world. The next semester, I took a 500-level writing intensive course (yes, as a freshman). I excelled, often achieving the highest test scores in the class, and writing one of the top term papers. That term paper became the base for my first research paper, The Economics of AI Research and Development in Waste Management Applications.</p>
+
+        <p style="font-size: 1rem; line-height: 1.75; color: var(--slate-700);">Economics has taught me a variety of important skills: thinking critically about problems, breaking problems down into simpler components and solving one at a time, game theory (making optimal decisions based on what you expect others to decide), project value estimation, academic and technical writing, and more.</p>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <a href="../index.html" class="footer-logo">BB<span>.</span></a>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="../work/index.html">Work</a>
+      <a href="../education/index.html">Education</a>
+      <a href="../projects/index.html">Projects</a>
+      <a href="../research/index.html">Research</a>
+      <a href="../writing/index.html">Writing</a>
+      <a href="../skills/index.html">Skills</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+    <span class="footer-copy">© 2026</span>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

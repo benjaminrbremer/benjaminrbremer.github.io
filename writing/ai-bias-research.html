@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algorithmic Bias in Hiring — Alex Chen</title>
+  <meta name="description" content="Research paper examining how ML-driven recruitment tools encode demographic bias and evaluating proposed remedies.">
+
+  <meta property="og:title"       content="Algorithmic Bias in Hiring — Alex Chen">
+  <meta property="og:description" content="How ML-based resume screening encodes and amplifies demographic bias, and what can be done about it.">
+  <meta property="og:image"       content="https://yourportfolio.com/assets/images/og-image.jpg">
+  <meta property="og:url"         content="https://yourportfolio.com/writing/ai-bias-research.html">
+  <meta property="og:type"        content="article">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary navigation">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo">BB<span>.</span></a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6"  x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li class="nav-item">
+        <a href="../work/index.html" class="nav-link" aria-haspopup="true">Work</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <h4>Experience</h4>
+            <a href="../work/index.html"     role="menuitem">All Experience →</a>
+            <a href="../work/coorstek.html" role="menuitem">CoorsTek</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="../education/index.html" class="nav-link" aria-haspopup="true">Education</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <a href="../education/index.html"      role="menuitem">Overview</a>
+            <a href="../education/coursework.html" role="menuitem">Relevant Coursework</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="../projects/index.html" class="nav-link" aria-haspopup="true">Projects</a>
+        <div class="nav-dropdown nav-dropdown--two-col" role="menu">
+          <div class="dropdown-group">
+            <h4>Personal</h4>
+            <a href="../projects/resume-app.html" role="menuitem">Resume Tailoring App</a>
+            <a href="../projects/arv-predictor.html" role="menuitem">ARV Predictor</a>
+          </div>
+          <div class="dropdown-group">
+            <h4>Work</h4>
+            <a href="../work/coorstek/material-history.html"      role="menuitem">Material History</a>
+            <a href="../work/coorstek/semantic-segmentation.html" role="menuitem">Semantic Segmentation</a>
+            <a href="../work/coorstek/rag-chatbot.html"           role="menuitem">RAG Chatbot</a>
+            <a href="../work/coorstek/defect-detection.html"      role="menuitem">Defect Detection</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="../research/index.html" class="nav-link" aria-haspopup="true">Research</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <h4>Papers</h4>
+            <a href="../research/index.html"     role="menuitem">All Research →</a>
+            <a href="../research/paper-one.html" role="menuitem">AI Waste Mgmt</a>
+            <a href="../research/paper-two.html" role="menuitem">IPR Subsidies</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="index.html" class="nav-link active" aria-haspopup="true">Writing</a>
+        <div class="nav-dropdown nav-dropdown--narrow" role="menu">
+          <div class="dropdown-group">
+            <h4>Samples</h4>
+            <a href="index.html"                  role="menuitem">All Writing →</a>
+            <a href="nvidia-ip-governance.html"    role="menuitem">NVIDIA IP Governance</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      <li><a href="../assets/resume.pdf" class="nav-link resume-btn" target="_blank" rel="noopener">Resume ↗</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+  <header class="article-hero" aria-labelledby="paper-title">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="sep" aria-hidden="true">/</span>
+        <a href="index.html">Writing</a>
+        <span class="sep" aria-hidden="true">/</span>
+        <span aria-current="page">Algorithmic Bias in Hiring</span>
+      </nav>
+      <div class="article-meta">
+        <span class="card-badge badge-research">Research Paper</span>
+        <span class="article-date">Spring 2024 · Economics of Information</span>
+      </div>
+      <h1 id="paper-title">Algorithmic Bias in Hiring: A Critical Analysis of ML-Driven Recruitment Tools</h1>
+      <p class="lead">
+        How machine learning models used in automated resume screening encode historical hiring biases —
+        and what technical and regulatory responses actually work.
+      </p>
+    </div>
+  </header>
+
+  <section class="article-body">
+    <div class="container">
+      <div class="article-layout">
+
+        <article class="article-content" aria-label="Research paper">
+
+          <div class="abstract-box">
+            <h3>Abstract</h3>
+            <p>
+              This paper examines how ML-based recruitment systems — from resume screening tools to
+              automated video interview analyzers — can encode and amplify demographic biases latent
+              in historical hiring data. Drawing on the economics of information and discrimination,
+              I argue that "de-biasing" a model at the feature or output level is insufficient when
+              the training labels themselves reflect discriminatory past decisions. I then evaluate
+              three classes of proposed remedies: technical (fairness constraints, causal modeling),
+              institutional (auditing mandates, disparate impact testing), and market-based (liability
+              regimes). I conclude that effective mitigation requires all three in combination, and
+              that opacity in vendor-supplied systems remains the most significant barrier to meaningful
+              accountability.
+            </p>
+          </div>
+
+          <h2>1. Introduction</h2>
+          <p>
+            The use of automated systems in hiring has expanded rapidly over the past decade. A 2022
+            survey by the Society for Human Resource Management found that over 79% of large employers
+            used some form of AI-assisted screening in their recruiting pipeline (SHRM, 2022). These
+            tools promise efficiency: reduced time-to-hire, greater consistency, and the elimination
+            of idiosyncratic human bias from early screening stages.
+          </p>
+          <p>
+            The promise has not always been delivered. Amazon's internal ML-based recruiting tool,
+            built on a decade of hiring data, was quietly abandoned in 2018 after engineers found it
+            systematically penalized resumes that included the word "women's" and downranked graduates
+            of all-female colleges (Dastin, 2018). The model had learned to replicate the gender
+            composition of historical hires — which were overwhelmingly male — rather than predict
+            job performance.
+          </p>
+          <p>
+            This paper examines the mechanism by which such bias emerges, the extent to which it
+            can be mitigated by technical means, and the institutional and regulatory conditions
+            required for accountability.
+          </p>
+
+          <h2>2. How Algorithmic Bias Arises</h2>
+          <p>
+            Algorithmic bias in hiring systems has two primary sources: <em>historical bias</em> in
+            training labels and <em>proxy discrimination</em> through correlated features.
+          </p>
+
+          <h3>2.1 Historical Bias in Training Labels</h3>
+          <p>
+            Supervised ML models for resume screening are typically trained on records of past hiring
+            decisions: who was hired, promoted, or rated as a high performer. If those decisions
+            reflected discriminatory preferences — whether conscious or statistical — the model will
+            learn to reproduce them. This is not a bug; it is the model performing exactly as designed,
+            optimizing for a label that is itself biased.
+          </p>
+          <p>
+            The economics literature on statistical discrimination (Arrow, 1973; Phelps, 1972) is
+            relevant here. An employer who uses group membership as a proxy for unobservable productivity —
+            even in a setting where the average group difference is real — will produce discriminatory
+            outcomes at the individual level. A trained ML model can encode exactly this form of
+            reasoning without ever explicitly encoding protected characteristics.
+          </p>
+
+          <h3>2.2 Proxy Discrimination</h3>
+          <p>
+            Even when protected characteristics are explicitly excluded from model features, correlated
+            proxies can reintroduce them. Zip code correlates with race due to residential segregation.
+            Career gaps correlate with gender due to caregiving norms. School prestige correlates with
+            socioeconomic background. A model that learns on these features learns, in part, from
+            demographic signal — regardless of intent.
+          </p>
+
+          <h2>3. Proposed Technical Remedies and Their Limits</h2>
+          <p>
+            The technical ML fairness literature has proposed numerous approaches: removing sensitive
+            features (fairness through unawareness), enforcing demographic parity or equalized odds
+            as constraints during training, and using causal models to separate legitimate predictors
+            from proxy variables.
+          </p>
+          <p>
+            These approaches share a common limitation: they address the symptom, not the cause.
+            If the training labels are themselves discriminatory, then a model constrained to equalized
+            false positive rates across demographic groups has not been made "fair" — it has been
+            made to fail equally across groups on a biased target. The correct label for what the
+            model should optimize — job performance, not historical hire probability — is often
+            unavailable or poorly measured.
+          </p>
+          <p>
+            Causal approaches are more promising in principle. By modeling the data-generating process
+            and conditioning out the "effect" of a protected characteristic, causal fairness methods
+            can in theory remove bias without discarding legitimate predictive signal. In practice,
+            the required causal graph is rarely identified from observational data alone, and
+            misspecification can introduce new biases.
+          </p>
+
+          <h2>4. Institutional and Regulatory Responses</h2>
+          <p>
+            Several jurisdictions have moved toward regulatory requirements for AI-based hiring tools.
+            New York City's Local Law 144 (effective 2023) requires employers using automated employment
+            decision tools to conduct annual bias audits and disclose results to candidates. The EU AI
+            Act classifies employment AI as high-risk, requiring conformity assessments and human oversight.
+          </p>
+          <p>
+            The effectiveness of audit mandates depends critically on what is audited. An audit that
+            measures only demographic parity in final hiring rates will miss disparate impact in
+            earlier screening stages. An audit conducted by a vendor on its own tool — the current
+            default under NYC LL 144 — faces obvious incentive misalignment. Meaningful auditing
+            requires independent access to training data, model architecture, and outcome labels,
+            none of which vendors are currently required to provide.
+          </p>
+
+          <h2>5. Conclusion</h2>
+          <p>
+            The problem of algorithmic bias in hiring is not, at its core, a technical problem.
+            It is an information problem: the labels used to train these systems — past hiring decisions —
+            contain information about historical discrimination that no post-hoc debiasing technique
+            can fully remove. Technical interventions are necessary but insufficient without institutional
+            structures that create transparency, independent audit access, and liability for discriminatory
+            outcomes.
+          </p>
+          <p>
+            The opacity of vendor-supplied systems is the most significant barrier to progress. Employers
+            who purchase black-box screening tools frequently have no visibility into training data,
+            feature sets, or failure modes. Effective accountability requires — at minimum — mandatory
+            disclosure of training data sources, model performance disaggregated by protected class,
+            and independent audit rights for affected candidates.
+          </p>
+          <p>
+            The economics of the market do not naturally produce this transparency. Vendors have
+            strong incentives to protect proprietary methods, and employers face limited liability
+            for discriminatory outcomes caused by third-party systems. Regulatory intervention to
+            correct this market failure is not just permissible — it is necessary.
+          </p>
+
+          <h2>References</h2>
+          <p style="font-size:.875rem; color:var(--slate-500); line-height:1.8;">
+            Arrow, K. (1973). The theory of discrimination. In O. Ashenfelter &amp; A. Rees (Eds.),
+            <em>Discrimination in labor markets</em>. Princeton University Press.
+            <br><br>
+            Dastin, J. (2018, October 10). Amazon scraps secret AI recruiting tool that showed bias
+            against women. <em>Reuters.</em>
+            <br><br>
+            Phelps, E. S. (1972). The statistical theory of racism and sexism.
+            <em>American Economic Review, 62</em>(4), 659–661.
+            <br><br>
+            SHRM. (2022). <em>Using artificial intelligence in the workplace: What HR professionals need
+            to know.</em> Society for Human Resource Management.
+          </p>
+
+          <div class="article-nav">
+            <a href="index.html" class="btn btn-outline-dark" style="font-size:.84rem;">← All Writing</a>
+          </div>
+
+        </article>
+
+        <aside class="article-sidebar" aria-label="Paper details">
+          <div class="sidebar-box">
+            <h4>Details</h4>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+              <div>
+                <div style="font-size:.7rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--slate-400); margin-bottom:3px;">Type</div>
+                <div style="font-size:.85rem; color:var(--navy-800);">Research Paper</div>
+              </div>
+              <div>
+                <div style="font-size:.7rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--slate-400); margin-bottom:3px;">Course</div>
+                <div style="font-size:.85rem; color:var(--navy-800);">Economics of Information</div>
+              </div>
+              <div>
+                <div style="font-size:.7rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--slate-400); margin-bottom:3px;">Date</div>
+                <div style="font-size:.85rem; color:var(--navy-800);">Spring 2024</div>
+              </div>
+              <div>
+                <div style="font-size:.7rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--slate-400); margin-bottom:3px;">Length</div>
+                <div style="font-size:.85rem; color:var(--navy-800);">~3,200 words</div>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-box">
+            <h4>Topics</h4>
+            <div class="sidebar-tech">
+              <span class="tech-tag" style="font-family:var(--font);">AI Ethics</span>
+              <span class="tech-tag" style="font-family:var(--font);">ML Fairness</span>
+              <span class="tech-tag" style="font-family:var(--font);">Labor Econ</span>
+              <span class="tech-tag" style="font-family:var(--font);">Regulation</span>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <a href="../index.html" class="footer-logo">BB<span>.</span></a>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="../work/index.html">Work</a>
+      <a href="../education/index.html">Education</a>
+      <a href="../projects/index.html">Projects</a>
+      <a href="../research/index.html">Research</a>
+      <a href="index.html">Writing</a>
+      <a href="../skills/index.html">Skills</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+    <span class="footer-copy">© 2026</span>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
